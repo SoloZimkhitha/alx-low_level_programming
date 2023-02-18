@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <time.h#include <stdio.h>
+#include <time.h>
 #include <stdio.h>
 /**
  * main- assigns a random number
@@ -12,17 +12,17 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	if (n % 10 > 5)
+	if ((n % 10) > 5)
         {
-                printf("Last digit of %d is %d", n, n % 10);
+                printf("Last digit of %d is %d\n", n, n % 10);
         }
-        else if (n % 10 == 0)
+        else if ((n % 10) == 0)
         {
-                printf("Last digit of %d is %d", n, n % 10);
+                printf("Last digit of %d is %d\n", n, n % 10);
         }
-        else (n % 10 < 6 && n % 10 != 0)
+        else ((n % 10) < 6 && (n % 10)!= 0)
         {
-                printf("Last digit of %d is %d", n, n % 10);
+                printf("Last digit of %d is %d\n", n, n % 10);
         }
 	return (0);
 }
