@@ -6,16 +6,13 @@
  */
 int main(void)
 {
-	char alp[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 
-	for (i = 0; i < 26; i++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		char current = alp[i];
-
-		if (current != 'q' || current != 'e')
+		if (i != 'q' || i != 'e')
 		{
-			putchar(alp[i]);
+			putchar(i);
 		}
 	}
 	putchar('\n');
