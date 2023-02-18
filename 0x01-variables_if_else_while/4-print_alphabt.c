@@ -11,7 +11,9 @@ int main(void)
 
 	for (i = 0; i < 26; i++)
 	{
-		if (alp[i] != 'q' || alp[i] != 'e')
+		char current = alp[i];
+
+		if (current != 'q' || current != 'e')
 		{
 			putchar(alp[i]);
 		}
