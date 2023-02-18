@@ -13,6 +13,10 @@ int main(void)
 	for (i = 0; i < 26; i++)
 	{
 		putchar(alpl[i]);
+	}
+
+	for (i = 0; i < 26; i++)
+	{
 		putchar(alpU[i]);
 	}
 	putchar('\n');
