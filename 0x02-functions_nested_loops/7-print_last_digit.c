@@ -10,7 +10,8 @@
 int print_last_digit(int n)
 {
 	int last_digit = (n % 10);
+	int asci_digit = last_digit + 48;
 
-	_putchar("%d\n", (char)last_digit);
+	_putchar("%d\n", (char)asci_digit);
 	return (n % 10);
 }
