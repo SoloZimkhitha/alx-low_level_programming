@@ -11,8 +11,7 @@
 int print_last_digit(int n)
 {
 	int last_digit = abs(n) % 10;
-	int asci_digit = last_digit + 48;
 
-	_putchar((char)asci_digit);
+	printf("%d\n", last_digit);
 	return (n % 10);
 }
