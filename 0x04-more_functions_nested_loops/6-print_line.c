@@ -1,7 +1,7 @@
 #include "main.h"
 #include <ctype.h>
 /**
- * print_line- draws a straight line in the termina
+ * print_line- draws a straight line in the terminal
  *
  * Return: 0
  */
@@ -11,7 +11,8 @@ void print_line(int n)
 
 	for (i = 0; i <= n; i++)
 	{
-		_putchar('_');
+		_putchar('_');	
 	}
+	_putchar('$');
 	_putchar('\n');
 }
