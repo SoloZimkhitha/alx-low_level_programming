@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 /**
- *int_strlen - returns the length of a string
+ *_strlen - returns the length of a string
  *
  * @s: parameter of type character
- * @strlen: parameter of type string
+ *
  * Return: Always 0
  */
 int _strlen(char *s)
