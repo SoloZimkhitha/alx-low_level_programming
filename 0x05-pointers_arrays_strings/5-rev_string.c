@@ -9,12 +9,17 @@
  */
 void rev_string(char *s)
 {
-	int i;
-	int len = strlen(s);
+	int k;
+	int l;
+	char t[1000];
 
-	for (i = len - 1; i >= 0; i--)
+	l = strlen(s);
+	for (k = l; k > 0; k--)
 	{
-		s[i - (len  - 1)] = s[i];
+		t[l-k] = s[k - 1];
 	}
-	puts(s);
+	for (k = 0; k < l; k++)
+	{
+		s[k] = t[k];
+	}
 }
