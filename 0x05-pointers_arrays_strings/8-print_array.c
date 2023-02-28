@@ -4,28 +4,18 @@
 /**
  * print_array - prints n elements of an array of integers
  *
- * @ *a: 1st parameter to type integer
+ * @a: 1st parameter to type integer
  * @n: 2nd parameter to type integer
  *
  * Return: nothing
  */
 void print_array(int *a, int n)
 {
-	char i;
-	int *a = i;
-	i = &a;
-	int array[i];
-	n = sizeof(numbers) / sizeof(numbers[0]);
+	int i;
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%d", *a);
-		printf("%d", array[i]);
+		printf("%d", a[i]);
 	}
-	if (i != n - 1)
-	{
-		printf(", ");
-	}
-
-	printf('\n');
+	printf("\n");
 }
