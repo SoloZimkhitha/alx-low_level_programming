@@ -4,10 +4,12 @@
 /**
 *_strcpy - copies the string
 *
+*@dest: parameter of type character
+*@src: parameter of type character
 *Return: 0
 */
 char *_strcpy(char *dest, char *src)
 {
-	strcpy(dest,src);
-	return(dest);
+	strcpy(dest, src);
+	return (dest);
 }
