@@ -10,12 +10,14 @@
 char *string_toupper(char *c)
 {
 	int i = 0;
-	
-	while (c[i] != '\0') {
-        	if (islower(c[i])){
+
+	while (c[i] != '\0')
+	{
+		if (islower(c[i]))
+		{
 			c[i] = toupper(c[i]);
+		}
+		i++;
 	}
-        i++;
-	}
-	return(c);
+	return (c);
 }
