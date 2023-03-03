@@ -7,15 +7,26 @@
  */
 char *cap_string(char *c)
 {
-   	int i;
-
-	while (c[i] != '\0')
+	char *str = c;
+	int z = 1;
+	
+	while (*str != 0)
 	{
-		if (islower(c[i]))
+		if (z)
 		{
-			c[i] = toupper(c[i]);
+			z = 0;
+		
+			if (*str >= 'a' && *str <= 'z')
+			{
+		 		*str -= 32;
+			}	
+		}			
+	
+		if (*str == ' ' || *str == '\t' || *str == '\n'|| *str == ';' || *str == '!' || *str == '?' || '"'||*str == '(' || *str == ')' 
+				|| *str == '{' || *str == '}')
+		{
+			z = 1;
 		}
-		i++;
 	}
-	return (str(c));
+	return ((c));
 }
