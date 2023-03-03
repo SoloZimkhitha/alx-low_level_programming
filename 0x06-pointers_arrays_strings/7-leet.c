@@ -8,18 +8,19 @@
  */
 char *leet(char *c)
 {
+	int i, j;
 	char chars[5][3] = {
         {'a', 'A', '4'},
         {'e', 'E', '3'},
-        {'i', 'I', '1'},
-        {'o', 'O', '0'},
-        {'s', 'S', '5'}};
+        {'o', 'O', '1'},
+        {'t', 'T', '0'},
+        {'l', 'L', '7'}};
 
-	for (int i = 0; i < strlen(c); i++)
+	for (i = 0; c[i] != '\0'; i++)
 	{
-        	for (int j = 0; j < 5; j++)
+        	for (j = 0; j < 5; j++)
 		{
-            		if (c[i] == chars[j][0] c[i] == chars[j][1])
+            		if (c[i] == chars[j][0] || c[i] == chars[j][1])
 			{
                 		c[i] = chars[j][2];
                 		break;
