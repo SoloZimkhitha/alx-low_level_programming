@@ -22,7 +22,7 @@ char *leet(char *c)
 	{
         	for (j = 0; j < 5; j++)
 		{
-            		if (c[i] == chars[j][0] && c[i] == chars[j][1])
+            		if (c[i] == chars[j][0] || c[i] == chars[j][1])
 			{
                 		c[i] = chars[j][2];
                 		break;
