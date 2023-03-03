@@ -1,5 +1,6 @@
 #include "main.h"
 #include <ctype.h>
+#include <string.h>
 /**
  * cap_string - capitalizes all words of a string
  * @c: parameter of type character
@@ -7,26 +8,30 @@
  */
 char *cap_string(char *c)
 {
-	char *str = c;
-	int z = 1;
-	
-	while (*str != 0)
+	char *str;
+	int i;
+	int length;
+	int new_word;
+
+	str = c;
+	i = 0;
+	length = strlen(c);
+	new_word = 1;
+
+	while (i < length) 
 	{
-		if (z)
-		{
-			z = 0;
-		
-			if (*str >= 'a' && *str <= 'z')
-			{
-		 		*str -= 32;
-			}	
-		}			
-	
-		if (*str == ' ' || *str == '\t' || *str == '\n'|| *str == ';' || *str == '!' || *str == '?' || '"'||*str == '(' || *str == ')' 
-				|| *str == '{' || *str == '}')
-		{
-			z = 1;
-		}
+        if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'|| str[i] == ';' || str[i] == '!' ||
+	str[i] == '?' || '"' ||str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}') 
+	{
+            new_word = 1;
+        }
+       	else if (new_word)
+	{
+            str[i] = toupper(str[i]);
+            new_word = 0;
+        }
+        i++;
 	}
-	return ((c));
+
+	return (str);
 }
