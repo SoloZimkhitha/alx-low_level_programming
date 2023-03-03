@@ -20,8 +20,17 @@ char *cap_string(char *c)
 
 	while (i < length) 
 	{
-        if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'|| str[i] == ';' || str[i] == '!' ||
-	str[i] == '?' || '"' ||str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}') 
+        if (str[i] == ' '||
+	str[i] == '\t' || 
+	str[i] == '\n'|| 
+	str[i] == ';' || 
+	str[i] == '!' ||
+	str[i] == '?' ||
+      	str[i] == '"' ||
+	str[i] == '(' || 
+	str[i] == ')' ||	
+	str[i] == '{' || 
+	str[i] == '}') 
 	{
             new_word = 1;
         }
