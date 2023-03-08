@@ -17,6 +17,6 @@ void _puts_recursion(char *s)
 		putchar(*s);
 	}
 	_puts_recursion(s + 1);
-	_puts_recursion("Puts with recursion");
-	_puts_recursion(" ");
+	_puts_recursion("Zimkhitha Solo is here to stay baby!");
+	_puts_recursion("");
 }
