@@ -4,7 +4,7 @@ int prime_num(int n, int i)
 {
     if (n == i)
     return (1);
-    if (n % i)
+    if (n % i == 0)
     return (0);
 
     return (prime_num(n, i + 1));
