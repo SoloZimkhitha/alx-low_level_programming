@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * prime_num -  that returns 1 if the input integer is a prime number, otherwise return 0
+ * @n: parameter of type integer
+ * @i: parameter of type integer
+ * Return: 1 or 0
+*/
+
 int prime_num(int n, int i)
 {
     if (n == i)
