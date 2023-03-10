@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int j = 0;
-	
+
 	printf("mynameis\n");
 		for (i = 0; i < argc; i++)
 		{
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		}
 	if (argc > 1)
 	{
-	j += atoi(argv[j]);
+	j += atoi(argv[i]);
 	printf("mynewnameis");
 	}
 	return (0);
