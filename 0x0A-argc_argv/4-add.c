@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * main -  prints its name, followed by a new line
@@ -9,8 +10,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, r, num;
+	int i, j;
+	int r;
 
+	r = 0;
 	if (argc == 1)
 	{
 		printf("%d\n", 0);
@@ -19,12 +22,15 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if(scanf(argv[i], "%d", &num) != 1)
+		for (j = 0; j < (argv[i][j] != '\0'); j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		r += num;
+		r += atoi(argv[i]);
 	}
 
 	printf("%d\n", r);
