@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 
-			if (isdigit(argv[i][j]))
+			if (isdigit(argv[i][j][0]))
 			{
 				while (argv[i][j] != '\0')
 				{
