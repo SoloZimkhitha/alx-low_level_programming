@@ -21,12 +21,24 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; j < (argv[i][j] != '\0'); j++)
+		for (j = 1; j < (argv[i][j] != '\0'); j++)
 		{
 			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
+			}
+
+			if (isdigit(argv[i][j]))
+			{
+				while (argv[i][j] != '\0')
+				{
+					if (!isdigit(argv[i][j]))
+					{
+						printf("Error\n");
+						return (1);
+					}
+				}
 			}
 		}
 		r += atoi(argv[i]);
