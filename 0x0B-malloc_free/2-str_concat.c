@@ -8,8 +8,8 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int len1;
-	unsigned int len2;
+	size_t int len1;
+	size_t int len2;
 	char *concat;
 
 	len1 = strlen(s1);
