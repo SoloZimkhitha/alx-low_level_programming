@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- *
- *
+ * *create_array - creates an array and returns a pointer
+ * @size: parameter of type unsigned int
+ * @c: parameter of type char
  * Return: 0
  */
 char *create_array(unsigned int size, char c)
@@ -14,7 +15,7 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	arr = (char*) malloc(size * sizeof(char));
+	arr = (char *) malloc(size * sizeof(char));
 	if (arr == NULL)
 	{
 		return (NULL);
