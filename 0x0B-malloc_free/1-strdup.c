@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * _strdup - eturns a pointer to a new string
+ * _strdup - returns a pointer to a new string
  * @str: parameter of type char
  * Return: a pointer to a new string
  */
