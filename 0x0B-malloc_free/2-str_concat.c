@@ -1,8 +1,9 @@
 #include <stdlib.h>
 #include <string.h>
+
 /**
- * str_concat -  copies a string
- * @s1: parameter of type integer
+ * str_concat - copies a string
+ * @s1: parameter of type character
  * @s2: parameter of type character
  * Return: pointer
  */
@@ -11,9 +12,6 @@ char *str_concat(char *s1, char *s2)
 	size_t len1;
 	size_t len2;
 	char *concat;
-
-	len1 = strlen(s1);
-	len2 = strlen(s2);
 
 	if (s1 == NULL)
 	{
@@ -25,16 +23,18 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	concat = malloc((len1 + len2 + 1) * sizeof(char));
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+
+	concat = calloc(len1 + len2 + 1, sizeof(char));
 
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
 
-	memcpy(concat, s1, len1);
-	memcpy(concat + len1, s2, len2 + 1);
+	strcpy(concat, s1);
+	strcpy(concat + len1, s2);
 
 	return (concat);
 }
-

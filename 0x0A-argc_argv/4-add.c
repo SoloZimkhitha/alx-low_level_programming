@@ -11,39 +11,40 @@
 int main(int argc, char *argv[])
 {
 	int i, j;
-	int r;
+	int num;
+	long int sum;
 
-	r = 0;
+	sum = 0;
+
 	if (argc == 1)
 	{
-		printf("%d\n", 0);
+		printf("%ld\n", sum);
+		return (0);
 	}
-
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 1; j < (argv[i][j] != '\0'); j++)
-		{
-			if (!isdigit(argv[i][j]))
-			{
-				printf("Error\n");
-				return (1);
-			}
+		char *arg = argv[i];
+		char *endptr;
 
-			if (isdigit(argv[i][j]))
-			{
-				while (argv[i][j] != '\0')
-				{
-					if (!isdigit(argv[i][j]))
-					{
-						printf("Error\n");
-						return (1);
-					}
-				}
-			}
+	for (j = 0; arg[j] != '\0'; j++)
+	{
+		if (!isdigit(arg[j]))
+		{
+			printf("Error\n");
+			return (1);
 		}
-		r += atoi(argv[i]);
 	}
 
-	printf("%d\n", r);
-	return (0);
+	num = strtol(arg, &endptr, 10);
+
+	if (*endptr != '\0')
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	sum += num;
+}
+	printf("%ld\n", sum);
+return (0);
 }
