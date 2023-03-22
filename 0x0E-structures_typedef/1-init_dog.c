@@ -1,15 +1,16 @@
 #include <stdio.h>
-
-typedef struct dog
+#include "dog.h"
+/**
+ * init_dog -  initializes a variable
+ * @d: pointer
+ * @name: name of the dog
+ * @age: dog age
+ * @owner: dog owner
+ * Return: nothing
+ */
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-    const char *name;
-    float age;
-    const char *owner;
-} dog_t;
-
-void init_dog(dog_t *d, const char *name, float age, const char *owner)
-{
-    d->name = name;
-    d->age = age;
-    d->owner = owner;
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }
