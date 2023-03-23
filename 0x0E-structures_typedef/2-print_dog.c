@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include "dog.h"
+#include <stdio.h>
+#include "dog.h"
 /**
  * struct dog - data
- * print_dog - prints data
+ * print_dog - This function prints information about a dog
  * @d: pointer
  * @name: dog name
  * @age: dog age
- * @owner: dog owner
+ * @breed: dog breed
  * Return: Always 0
  */
 void print_dog(struct dog *d)
