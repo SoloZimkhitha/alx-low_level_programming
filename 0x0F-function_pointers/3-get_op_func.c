@@ -35,5 +35,5 @@ int (*get_op_func(char *s))(int, int)
 		return NULL;
 	}
 
-    return (ops[i].op[0] == s[0] ? ops[i].f : NULL);
+    return (ops[i].op == s ? ops[i].f : NULL);
 }
