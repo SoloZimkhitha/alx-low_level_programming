@@ -28,12 +28,6 @@ int (*get_op_func(char *s))(int, int)
     i += (*s == '*') * 2;
     i += (*s == '/') * 3;
     i += (*s == '%') * 4;
-
-	if(ops[i].f == NULL)
-	{
-		printf("%s", "Error");
-		return NULL;
-	}
-
-    return (ops[i].op == s ? ops[i].f : NULL);
+	
+    return (*(ops[i].f) == *s ? ops[i].f : NULL);
 }
