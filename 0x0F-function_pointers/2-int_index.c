@@ -1,3 +1,4 @@
+#include <stdlib.h>
 /**
  * int_index - search for an int in an array
  * @array: paramer of type int pointer
@@ -9,6 +10,11 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
+	if(array == NULL || cmp == NULL)
+	{
+		return;
+	}
+	
 	if (size <= 0)
 	{
 		return (-1);
