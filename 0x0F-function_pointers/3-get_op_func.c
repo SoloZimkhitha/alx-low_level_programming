@@ -10,24 +10,20 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] = 
-	{
+	op_t ops[] = {
 		{"+", op_add},
-        {"-", op_sub},
-        {"*", op_mul},
-        {"/", op_div},
-        {"%", op_mod},
-        {NULL, NULL}
-	};
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}};
 	int i;
 
 	i = 0;
-
-    i += (*s == '+') * 0;
-    i += (*s == '-') * 1;
-    i += (*s == '*') * 2;
-    i += (*s == '/') * 3;
-    i += (*s == '%') * 4;
-
-    return (*(ops[i].op) == *s ? ops[i].f : NULL);
+	i += (*s == '+') * 0;
+	i += (*s == '-') * 1;
+	i += (*s == '*') * 2;
+	i += (*s == '/') * 3;
+	i += (*s == '%') * 4;
+	return (*(ops[i].op) == *s ? ops[i].f : NULL);
 }
