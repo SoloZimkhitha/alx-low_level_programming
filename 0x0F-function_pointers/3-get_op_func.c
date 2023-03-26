@@ -9,8 +9,9 @@
  */
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] = {
-	{"+", op_add},
+	op_t ops[] = 
+	{
+		{"+", op_add},
         {"-", op_sub},
         {"*", op_mul},
         {"/", op_div},
@@ -18,13 +19,14 @@ int (*get_op_func(char *s))(int, int)
         {NULL, NULL}
 	};
 	int i;
-
+	
 	i = 0;
 
-	while (ops[i].op != NULL && strcmp(ops[i].op, s) != 0)
-	{
-		i++;
-	}
+    i += (*s == '+') * 0;
+    i += (*s == '-') * 1;
+    i += (*s == '*') * 2;
+    i += (*s == '/') * 3;
+    i += (*s == '%') * 4;
 
-	return (ops[i].f);
+    return (ops[i].f == NULL ? NULL : ops[i].f);
 }
