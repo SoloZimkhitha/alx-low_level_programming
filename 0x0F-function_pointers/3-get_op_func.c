@@ -19,7 +19,7 @@ int (*get_op_func(char *s))(int, int)
         {NULL, NULL}
 	};
 	int i;
-	
+
 	i = 0;
 
     i += (*s == '+') * 0;
@@ -28,5 +28,11 @@ int (*get_op_func(char *s))(int, int)
     i += (*s == '/') * 3;
     i += (*s == '%') * 4;
 
-    return (ops[i].f == NULL ? NULL : ops[i].f);
+	if(ops[i].f == NULL)
+	{
+		printf("%s", "Error");
+		return NULL;
+	}
+
+    return (ops[i].f);
 }
