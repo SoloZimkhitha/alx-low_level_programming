@@ -30,7 +30,6 @@ int sum_them_all(const unsigned int n, ...)
 int sum_them_all(const unsigned int n, ...)
 {
    unsigned int i, sum;
-   va_list args;
 
     if (n == 0)
     {
