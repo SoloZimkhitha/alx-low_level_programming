@@ -25,17 +25,21 @@ void print_all(const char * const format, ...)
 					printf("%s%c", sep, va_arg(args, int));
 					break;
 				case 'i':
-					printf(" %s%d", sep, va_arg(args, int));
+					printf("%s%d", sep, va_arg(args, int));
 					break;
 				case 'f':
 					printf("%s%f", sep, va_arg(args, double));
 					break;
 				case 's':
 					s = va_arg(args, char *);
-					if (!s)
+					if (s == NULL)
 					{
 						s = "(nil)";
-							printf("%s%s", sep, s);
+						printf("%s%s", sep, s);
+					}
+					else
+					{
+						printf("%s%s", sep, s);
 					}
 					break;
 				default:
