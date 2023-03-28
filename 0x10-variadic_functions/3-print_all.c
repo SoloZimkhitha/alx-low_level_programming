@@ -9,7 +9,7 @@
 void print_all(const char * const format, ...)
 {
 	int i;
-	char *s, *sep = "";
+	char *s, *sep = ", ";
 	va_list args;
 
 	va_start(args, format);
@@ -32,21 +32,12 @@ void print_all(const char * const format, ...)
 					break;
 				case 's':
 					s = va_arg(args, char *);
-					if (s == NULL)
-					{
-						s = "(nil)";
-						printf("%s%s", sep, s);
-					}
-					else
-					{
-						printf("%s%s", sep, s);
-					}
+					s != NULL ? printf("%s%s", sep, "(nil)") : printf("%s%s", sep, s);
 					break;
 				default:
 					i++;
 					continue;
 			}
-			sep = ", ";
 			i++;
 		}
 		printf("\n");
